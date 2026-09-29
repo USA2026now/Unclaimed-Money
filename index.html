@@ -3,109 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Offer - Claim Your Access Now</title>
-    <!-- Tailwind CSS for modern styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Unclaimed Money - Claim Your Funds</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: #27ae60;
+            color: #ffffff;
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .cta-btn:hover {
+            background: #219653;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+        }
+        .footer-note {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white min-h-screen flex flex-col justify-between">
+<body>
 
-    <!-- Header Section -->
-    <header class="w-full py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent">
-            DIGITAL TODAY
-        </div>
-        <span class="text-xs uppercase tracking-widest bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full border border-pink-500/30">
-            Exclusive Access
-        </span>
-    </header>
+    <div class="container">
+        <h1>Check Your Unclaimed Funds</h1>
+        <p>You might have money waiting for you from government grants, insurance policies, or tax refunds. Click the button below to check now!</p>
+       
+        <!-- Offer Button -->
+        <button id="offerBtn" class="cta-btn">Claim Now</button>
+       
+        <div class="footer-note">Secure & Verified System</div>
+    </div>
 
-    <!-- Main Hero Section -->
-    <main class="flex-grow flex items-center justify-center px-4 py-12">
-        <div class="max-w-3xl w-full text-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-            
-            <!-- Glowing background effect -->
-            <div class="absolute -top-24 -right-24 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="inline-block mb-4 p-3 bg-pink-500/10 text-pink-400 rounded-2xl border border-pink-500/20">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-            </div>
-
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
-                Unlock Your Special <span class="bg-gradient-to-r from-pink-400 to-yellow-300 bg-clip-text text-transparent">Limited Offer</span> Today!
-            </h1>
-
-            <p class="text-gray-300 text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-                Take advantage of this exclusive opportunity right now. Click the button below to proceed securely to your destination with fully tracked parameters.
-            </p>
-
-            <!-- Call to Action Button with UTM script target class -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://digitaltoday.click/tracking/track.php?id=5e34df94507577b5df788eb073ea698d&o=909&u=51233" 
-                   class="blog-btn group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl hover:from-pink-500 hover:to-purple-500 shadow-lg hover:shadow-pink-500/25 active:scale-95">
-                    <span class="relative flex items-center gap-3 text-lg">
-                        Claim Offer Now
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </span>
-                </a>
-            </div>
-
-            <p class="text-xs text-gray-500 mt-6">
-                🔒 Secure & Verified Tracking Link. Instant redirection enabled.
-            </p>
-        </div>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="w-full py-6 text-center text-xs text-gray-500 border-t border-white/5">
-        &copy; 2026 Digital Today. All rights reserved.
-    </footer>
-
-    <!-- Automatic UTM Generator Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Target elements with the '.blog-btn' class
-            const actionButtons = document.querySelectorAll('.blog-btn');
+        document.getElementById('offerBtn').addEventListener('click', function (e) {
+            e.preventDefault(); // Default jump rokay ga taake script execute ho sakay
 
-            actionButtons.forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault(); // Prevent direct instant navigation to manipulate URL
+            // Base Tracking Link
+            let baseUrl = "https://digitaltoday.click/tracking/track.php?id=5e34df94507577b5df788eb073ea698d&o=909&u=51233&utm_source=instagram&utm_medium=social&utm_campaign=landing_page_offer";
 
-                    let originalUrl = this.getAttribute('href');
-                    if (!originalUrl) return;
+            try {
+                let url = new URL(baseUrl);
+               
+                // 100% Unique ID Generator (Random string + High precision timestamp + Performance counter)
+                let randomPart1 = Math.random().toString(36).substring(2, 10);
+                let randomPart2 = Math.random().toString(36).substring(2, 10);
+                let preciseTime = Date.now().toString(36);
+                let highPerf = Math.floor(performance.now() * 1000).toString(36);
+               
+                // Final unique string jo kabhi repeat nahi ho gi
+                let uniqueClickId = `ig_${randomPart1}_${preciseTime}_${highPerf}_${randomPart2}`;
 
-                    try {
-                        let url = new URL(originalUrl, window.location.origin);
-                        
-                        // Append dynamic Instagram UTM parameters
-                        url.searchParams.set('utm_source', 'instagram');
-                        url.searchParams.set('utm_medium', 'social');
-                        url.searchParams.set('utm_campaign', 'landing_page_offer');
-                        
-                        // Generate a unique identifier on every single click
-                        let randomId = 'ig_' + Math.random().toString(36).substring(2, 9) + '_' + Date.now();
-                        url.searchParams.set('utm_content', randomId);
+                // URL mein utm_content set kar dein
+                url.searchParams.set('utm_content', uniqueClickId);
 
-                        // Redirect user to the newly structured tracking link
-                        window.location.href = url.toString();
+                // User ko naye dynamic link par redirect kar do
+                window.location.href = url.toString();
 
-                    } catch (error) {
-                        console.error('Invalid URL parsing:', error);
-                        window.location.href = originalUrl; // Fallback to raw link if any error occurs
-                    }
-                });
-            });
+            } catch (error) {
+                console.error('Tracking Error:', error);
+                // Fallback agar koi masla ho toh direct link khol de
+                window.location.href = baseUrl;
+            }
         });
     </script>
+
 </body>
 </html>
