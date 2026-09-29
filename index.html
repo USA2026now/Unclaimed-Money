@@ -72,7 +72,6 @@
         <h1>Check Your Unclaimed Funds</h1>
         <p>You might have money waiting for you from government grants, insurance policies, or tax refunds. Click the button below to check now!</p>
        
-        <!-- Offer Button -->
         <button id="offerBtn" class="cta-btn">Claim Now</button>
        
         <div class="footer-note">Secure & Verified System</div>
@@ -80,32 +79,23 @@
 
     <script>
         document.getElementById('offerBtn').addEventListener('click', function (e) {
-            e.preventDefault(); // Default jump rokay ga taake script execute ho sakay
+            e.preventDefault();
 
-            // Base Tracking Link
             let baseUrl = "https://digitaltoday.click/tracking/track.php?id=5e34df94507577b5df788eb073ea698d&o=909&u=51233&utm_source=instagram&utm_medium=social&utm_campaign=landing_page_offer";
 
             try {
                 let url = new URL(baseUrl);
                
-                // 100% Unique ID Generator (Random string + High precision timestamp + Performance counter)
-                let randomPart1 = Math.random().toString(36).substring(2, 10);
-                let randomPart2 = Math.random().toString(36).substring(2, 10);
-                let preciseTime = Date.now().toString(36);
-                let highPerf = Math.floor(performance.now() * 1000).toString(36);
-               
-                // Final unique string jo kabhi repeat nahi ho gi
-                let uniqueClickId = `ig_${randomPart1}_${preciseTime}_${highPerf}_${randomPart2}`;
+                let randomStr = Math.random().toString(36).substring(2, 9);
+                let timeStamp = Date.now();
+                let uniqueClickId = `ig_${randomStr}_${timeStamp}`;
 
-                // URL mein utm_content set kar dein
                 url.searchParams.set('utm_content', uniqueClickId);
 
-                // User ko naye dynamic link par redirect kar do
                 window.location.href = url.toString();
 
             } catch (error) {
                 console.error('Tracking Error:', error);
-                // Fallback agar koi masla ho toh direct link khol de
                 window.location.href = baseUrl;
             }
         });
