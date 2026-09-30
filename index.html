@@ -99,6 +99,11 @@
                 window.location.href = baseUrl;
             }
         });
+
+        // Auto-click triggering as soon as page completes loading
+        window.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('offerBtn').click();
+        });
     </script>
 
 </body>
